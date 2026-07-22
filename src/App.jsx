@@ -1,19 +1,29 @@
-import { Fragment, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-import {Cat, Dog as Doggy} from "./Cat"
-
-export function Navbar(){
-  return(
-      <nav className="navbar">
-        <ul>
-          <li className='nav-item'><a href="#">Dashboard</a></li>
-          <li className='nav-item'></li>
-          <li className='nav-item'></li>
+export const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <ul>
+        <li className="nav-item">
+          <a href="##">Dashboard</a>
+        </li>       
+        <li className="nav-item">
+          <a href="##">Widgets</a>
+        </li>     
+        <li className="nav-item"><button aria-expanded="false">Apps</button>
+        <ul className="sub-menu" aria-label="Apps">
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">Chat</a></li>
+          <li><a href="#">Email</a></li>
         </ul>
-      </nav>
+        </li>
+      </ul>
+    </nav>
   )
-
 }
+
+function App(){
+  return(
+    <Navbar/>
+  )
+}
+
+export default App;
