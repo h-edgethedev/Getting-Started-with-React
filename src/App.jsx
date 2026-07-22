@@ -1,28 +1,31 @@
-export const Navbar = () => {
+export function Footer() {
   return (
-    <nav className="navbar">
+    <footer>
       <ul>
-        <li className="nav-item">
-          <a href="##">Dashboard</a>
-        </li>       
-        <li className="nav-item">
-          <a href="##">Widgets</a>
-        </li>     
-        <li className="nav-item"><button aria-expanded="false">Apps</button>
-        <ul className="sub-menu" aria-label="Apps">
-          <li><a href="#">Calendar</a></li>
-          <li><a href="#">Chat</a></li>
-          <li><a href="#">Email</a></li>
-        </ul>
-        </li>
+        <li><a href="#">Fitness Dashboard</a></li>
+        <li><a href="#">Watch Videos</a></li>
+        <li><a href="#">Privacy Policy</a></li>
       </ul>
-    </nav>
+      <ul>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+      <p>&copy; 2026 H~Edge Studios. All Rights Reserved</p>
+      <ul>
+        <li><a href="#">🎮</a></li>
+        <li><a href="#">🐦</a></li>
+        <li><a href="#">💻</a></li>
+        <li><a href="#">🏀</a></li>
+      </ul>
+
+    </footer>
   )
 }
 
-function App(){
-  return(
-    <Navbar/>
+function App() {
+  return (
+    <Footer />
   )
 }
 
