@@ -11,7 +11,7 @@
   --light-grey: #e1e0e0;
   --dark-purple: #7c0e7c;
   --black: #000;
-  --gray: grey;
+  --gray: #E3E1EB;
 }
 
 footer{
@@ -21,6 +21,7 @@ footer{
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-size: 1.2rem;
 }
 
 ul{
@@ -52,3 +53,6 @@ footer ul:nth-of-type(3) li{
   font-size: 1.7rem;
 }
 
+a:hover{
+  color: rgb(1, 113, 250);
+}
