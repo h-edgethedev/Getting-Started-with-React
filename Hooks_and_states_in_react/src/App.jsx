@@ -1,11 +1,11 @@
 import { useState } from "react";
+import {ColorPicker} from "./ColorPicker"
+import "./App.css"
 
 function App() {
     return (
         <>
-            <div id="color-picker-container">
-                <input type="color" name="" id="" />
-            </div>
+            <ColorPicker />
         </>
     )
 }
