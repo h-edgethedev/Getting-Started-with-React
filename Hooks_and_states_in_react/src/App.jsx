@@ -1,26 +1,13 @@
 import { useState } from "react";
 
-
-export const ToggleApp = () => {
-  const [isVisible, setIsVisible] = useState(true);
-
-  function handleToggleVisibility() {
-    setIsVisible(!isVisible)
-  }
-
-  return (
-    <div id="toggle-container">
-      <button id="toggle-button" onClick={handleToggleVisibility}>{isVisible? "Hide": "Show"} Message</button>
-      {isVisible && <p id="message">I love freeCodeCamp!</p>}
-    </div>
-  );
-};
 function App() {
-  return (
-    <>
-      <ToggleApp />
-    </>
-  )
+    return (
+        <>
+            <div id="color-picker-container">
+                <input type="color" name="" id="" />
+            </div>
+        </>
+    )
 }
 
 export default App;
