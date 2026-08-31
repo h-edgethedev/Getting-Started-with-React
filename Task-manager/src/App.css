@@ -1,0 +1,156 @@
+body {
+    margin: auto;
+    width: 90%;
+
+}
+
+h1 {
+    margin-top: 40px;
+}
+
+#task-div {
+    margin-top: 50px;
+}
+
+
+/* From Uiverse.io by Alaner-xs */
+.input {
+    background-color: #383838;
+    border: 1ex solid none;
+    border-top-width: 1.7em;
+    margin: 0;
+    padding: 0;
+    color: #383838;
+    word-wrap: break-word;
+    outline: 7px solid #383838;
+    height: 30px;
+    font-size: 17px;
+    text-align: center;
+    transition: all 1s;
+    width: 350px;
+    /* max-width: 190px; */
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.input:hover {
+    border-top-width: 0.2em;
+    background-color: #f1e8e8;
+}
+
+.input:focus {
+    border-top-width: 0.2em;
+    background-color: #f1e8e8;
+}
+
+/* From Uiverse.io by adamgiebl */
+.cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg,
+            rgba(20, 167, 62, 1) 0%,
+            rgba(102, 247, 113, 1) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+    margin-right: 6px;
+}
+
+.cssbuttons-io-button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+.search-elements{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+}
+
+.tasks-container, ul{
+    list-style-type: none;
+    color: aqua;
+    text-align: center;
+}
+
+.tasks-container {
+    margin-top: 30px;
+    width: 350px;
+}
+
+.tasks-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.task {
+    background: #2a2a2a;
+    border-radius: 14px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid rgba(102, 247, 113, 1);
+    transition: transform 0.2s ease;
+}
+
+.task:hover {
+    transform: translateY(-2px);
+}
+
+.task strong {
+    color: #f1e8e8;
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.task small {
+    color: #9a9a9a;
+    font-size: 13px;
+}
+
+.delete-task {
+    background: transparent;
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+    border-radius: 10px;
+    padding: 6px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.delete-task:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+.tasks-container {
+    margin: 30px auto 0;
+    width: 350px;
+}
