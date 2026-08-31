@@ -8,18 +8,41 @@ function TaskTracker() {
         setInput(event.target.value)
     }
     function addTask() {
+        if (input === "".trim()) {
+            alert("You need to input a task!")
+            return
+        }
         const newTask = {
             id: Date.now(),
             task: input,
-            date: new Date().toLocaleDateString()
+            date: new Date().toLocaleDateString(),
+            completed: false
         }
         setTask((prevTasks) => [...prevTasks, newTask])
         console.log(tasks)
+        setInput("")
     }
-    function handleDelete(buttonEl) {
+    function handleDelete(id) {
+        setTask((prevTasks) =>
+            prevTasks.filter((task) => task.id !== id)
+        )
+    }
 
+    function handleToggle(id) {
+        setTask((prevTasks) =>
+            prevTasks.map((task) => {
+                if (task.id === id) {
+                    return {
+                        ...task,
+                        completed: true
+                    }
+                }
+                return task
+            })
+        )
+        console.log(tasks)
     }
-    // console.log(new Date().toLocaleDateString())
+    // // console.log(new Date().toLocaleDateString())
     return (
         <div id="task-div">
             <div className="search-elements">
@@ -43,10 +66,11 @@ function TaskTracker() {
                 <ul>
                     {
                         tasks.map((task) => (
-                            <li className="task" id="{task.id}">
+                            <li className="task" id={task.id}>
                                 <strong>{task.task}</strong><br />
                                 <small>{task.date} </small>
-                                <button className="delete-task" onClick={deleteTask(this)}>Delete</button>
+                                <button className="delete-task" onClick={() => handleDelete(task.id)}>Delete</button>
+                                <input type="checkbox" name="task-completed-status" onChange={() => handleToggle(task.id)} />
                             </li>
                         ))
                     }
