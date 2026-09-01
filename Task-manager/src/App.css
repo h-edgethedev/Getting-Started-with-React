@@ -75,7 +75,7 @@ h1 {
     box-shadow: 0 0.3em 1em -0.5em #14a73e98;
 }
 
-.search-elements{
+.search-elements {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,7 +86,8 @@ h1 {
     margin: auto;
 }
 
-.tasks-container, ul{
+.tasks-container,
+ul {
     list-style-type: none;
     color: aqua;
     text-align: center;
@@ -156,4 +157,11 @@ h1 {
 .tasks-container {
     margin: 30px auto 0;
     width: 350px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    /* or */
+    transform: scale(1.18);
 }
