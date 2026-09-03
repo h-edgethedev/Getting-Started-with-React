@@ -14,9 +14,11 @@
     <script>
         const input = document.getElementById("input")
         const output = document.getElementById("output")
-        input.addEventListener("keypress", (e)=>{
+        input.addEventListener("keypress", (e) => {
             output.innerText = e.key
         })
+        let randomDigit = Math.floor(Math.random() * 1000000)
+        console.log(randomDigit)
     </script>
 </body>
 
