@@ -1,48 +1,28 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import "./App.css"
+import useFetch from "./Hooks/UseFetch";
+import FetchTodos from "./Working with Data using swr"
+import { useState, useEffect } from "react";
 
 function App() {
-  const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [displayedImagesArr, setDisplayedImageArr] = useState([])
-  useEffect(() => {
-    fetch("https://dog.ceo/api/breed/german/shepherd/images")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data)
-        setLoading(false)
-        console.log(data)
-        setDisplayedImageArr(data.message.slice(0, 10))
-        console.log("done")
-        console.log(displayedImagesArr)
-      })
-      .catch((error) => {
-        setError(error)
-        setLoading(false)
-      })
-  }, [])
-
-  if(loading){
-    return(
-      <p>Loading...</p>
-    )
-  }
-  if (error){
-    return <p>{error.message}</p>
-  }
-  return (
-    <>
-      <h1>Dog info</h1>
-      <div>
-        {
-          displayedImagesArr.map((image, index) => (
-            <img src={image} width={"500px"} height={"400px"} key={index} />
-          ))
-        }
-      </div>
-    </>
-  )
+    const { data, loading, error } = useFetch(" https://justmeme.wtf/api/v1/trending")
+    if (loading){
+        return <h2>Loading....</h2>
+    }
+    if (error){
+        return <h2>{error.message}</h2>
+    }
+    const randomNumber = Math.ceil(Math.random()*10)+1
+    const trending5 = data.trending.slice(randomNumber, randomNumber+6)
+    return (
+            <>
+                <h2>Memes</h2>
+                <ul>
+                    {trending5.map((meme, index) =>(
+                        <img src={meme.url} alt="meme.id" key={index} height={"250px"} width={"250px"}/>
+                    ))}
+                </ul>
+            </>
+        )
 }
 
-export default App
+export default App;
