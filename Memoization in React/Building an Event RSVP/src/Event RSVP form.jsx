@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import VerifyOTP from "./SMTP";
 
 export function EventRSVPForm() {
     const [name, setName] = useState("")
@@ -7,6 +8,7 @@ export function EventRSVPForm() {
     const [diet, setDiet] = useState("")
     const [additionalGuests, setAdditionalGuests] = useState(false)
     const [submitted, setSubmitted] = useState(false)
+    const []
     function handleNameChange(e) {
         setName(e.target.value)
     }
@@ -53,6 +55,8 @@ export function EventRSVPForm() {
                         <p><strong>Number of Attendees: </strong>{numAttendants} </p>
                         <p><strong>Dietary Preferences</strong>{diet} </p>
                         <p><strong>Bringing Others: </strong>{additionalGuests ? "Yes" : "No"} </p>
+
+                        <input type="number" onChange={}/>
                     </div>
                 }
             </form>
