@@ -8,7 +8,7 @@ export function EventRSVPForm() {
     const [diet, setDiet] = useState("")
     const [additionalGuests, setAdditionalGuests] = useState(false)
     const [submitted, setSubmitted] = useState(false)
-    const []
+    const [otpInput, setOtpInput] = useState(null)
     function handleNameChange(e) {
         setName(e.target.value)
     }
@@ -27,6 +27,13 @@ export function EventRSVPForm() {
     function submitEventListener(Event) {
         Event.preventDefault()
         setSubmitted(true)
+    }
+    function generateOTP() {
+        let randint = math.floor(math.random()*1000000)
+        return randint;
+    }
+    function handleOtpChange(e) {
+        setOtpInput(e.target.value)
     }
     return (
         <div>
@@ -55,8 +62,9 @@ export function EventRSVPForm() {
                         <p><strong>Number of Attendees: </strong>{numAttendants} </p>
                         <p><strong>Dietary Preferences</strong>{diet} </p>
                         <p><strong>Bringing Others: </strong>{additionalGuests ? "Yes" : "No"} </p>
-
-                        <input type="number" onChange={}/>
+                        <p>An OTP was sent to {email} kindly input it below</p>
+                        <label htmlFor="otp-input">Verify OTP: </label>
+                        <input type="number" onChange={handleOtpChange} />
                     </div>
                 }
             </form>

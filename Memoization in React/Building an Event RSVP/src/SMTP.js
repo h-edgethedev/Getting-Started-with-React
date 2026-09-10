@@ -7,7 +7,7 @@ function VerifyOTP(message) {
         secure: true,
         auth: {
             user: "oluwanifemibarber@gmail.com",
-            pass: "beatrice77"
+            pass: "something"
         }
     })
     async function sendMail() {
