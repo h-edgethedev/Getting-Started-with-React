@@ -1,6 +1,6 @@
 :root {
   --dark-grey: #1b1b32;
-  --light-garey: #f5f6f7;
+  --light-grey: #f5f6f7;
   --dark-orange: #f89808;
   --yellow: #f1be32;
   --golden-yellow: #feac32;
@@ -16,7 +16,10 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
   color: var(--dark-grey);
-  background-color: var(--dark-grey);
+  background: linear-gradient(60deg, red, green, blue);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 main,
@@ -31,6 +34,7 @@ main,
   width: 90%;
   margin: 20px;
   padding: 10px;
+  margin: auto  ;
 }
 
 h1 {
