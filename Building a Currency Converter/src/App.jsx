@@ -35,7 +35,7 @@ function App() {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("app-theme", theme);
   }, [theme]);
-
+//Toggle theme
   const toggleTheme = () => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
