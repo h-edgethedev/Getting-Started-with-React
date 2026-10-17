@@ -11,6 +11,7 @@ const items = [
   "Broccoli",
   "Paper Towels",
   "Dish Soap",
+  "Groundnut oil"
 ];
 
 let prevToggleItem = null
