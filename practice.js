@@ -11,3 +11,7 @@ function callMyName(){
     var name = "Heritage"
     console.log(name)
 }
+
+//Var composed of other things
+let age = 18
+console.log(age)
